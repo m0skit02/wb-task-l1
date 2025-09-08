@@ -32,7 +32,7 @@ func main() {
 	}
 
 	for i := 1; ; i++ {
-		jobs <- i // пишем в канал
+		jobs <- i
 		time.Sleep(time.Second)
 	}
 }
