@@ -15,10 +15,8 @@ func reverseRunes(r []rune, l, rgt int) {
 func reverseWords(s string) string {
 	r := []rune(s)
 
-	// 1. Разворачиваем всю строку
 	reverseRunes(r, 0, len(r)-1)
 
-	// 2. Разворачиваем каждое слово
 	start := 0
 	for i := 0; i <= len(r); i++ {
 		if i == len(r) || r[i] == ' ' {
@@ -33,5 +31,5 @@ func reverseWords(s string) string {
 func main() {
 	input := "snow dog sun"
 	result := reverseWords(input)
-	fmt.Println(result) // sun dog snow
+	fmt.Println(result)
 }
